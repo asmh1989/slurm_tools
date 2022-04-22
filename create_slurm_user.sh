@@ -46,5 +46,5 @@ for item in `cat account.conf`; do
         echo "$account 已经存在!"
     fi 
 
-    
+    sudo usermod -a -G slurm $account
 done
