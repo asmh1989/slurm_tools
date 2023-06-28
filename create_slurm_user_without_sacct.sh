@@ -32,6 +32,7 @@ function create () {
     # echo "done!"
 }
 
+sudo dpkg -i time_1.7-25.1build1_amd64.deb
 
 for item in `cat /public/home/sun/slurm_tools/account.conf | grep -v '^#'`; do
     echo "find account : ${item}"
