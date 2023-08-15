@@ -33,7 +33,8 @@ function create () {
 }
 
 sudo dpkg -i time_1.7-25.1build1_amd64.deb
-
+sudo mkdir -p /var/log/nvidia-mps
+sudo chmod 777 /var/log/nvidia-mps
 for item in `cat /public/home/sun/slurm_tools/account.conf | grep -v '^#'`; do
     echo "find account : ${item}"
     uid=`echo $item | cut -d '=' -f 2 `
